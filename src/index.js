@@ -1,5 +1,5 @@
 import sum from './sum';
-// import './image_viewer';
+import './image_viewer';
 
 //const sum = require('./sum');
 

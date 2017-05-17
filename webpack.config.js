@@ -5,7 +5,8 @@ const config = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: 'build/' // used by any loader that produce direct file reference to the a file in the output directory
     },
     module: {
         rules: [{
@@ -15,7 +16,7 @@ const config = {
             {
                 //use: ['style-loader', 'css-loader'],
                 loader: ExtractTextPlugin.extract({
-                    loader: 'css-loader'
+                    use: 'css-loader'
                 }),
                 test: /\.css$/
             },
